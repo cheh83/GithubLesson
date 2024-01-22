@@ -2,7 +2,7 @@ name: Check code qality
 
 on: [pull_request]
 
-jobs:
+jobs: 
   code-qality:
     runs-on: ubuntu-latest
     steps:
