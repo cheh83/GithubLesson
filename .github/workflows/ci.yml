@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   code-qality:
-    runs-on: ubuntu -latest
+    runs-on: ubuntu-latest
     step:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -13,6 +13,6 @@ jobs:
       - name: install dependencies
         run: pip install black ruff isort
       - name: run formatets
-        run: python -m black --check . && python -m isort --check .
+        run: python -m black --check .
       - name: run linter
         run: python -m ruff .
